@@ -1,12 +1,12 @@
 const { ethers } = require("ethers");
 
-const provider = new ethers.providers.JsonRpcProvider(
+const provider = new ethers.JsonRpcProvider(
   "https://eth-mainnet.g.alchemy.com/v2/fTxkuelVKsi8eUlvM7KH9iYqt11NLBXVz"
 );
 
 const getAddress = async (address) => {
   const balance = await provider.getBalance(address);
-  console.log(ethers.utils.formatEther(balance));
+  console.log(ethers.formatEther(balance));
 };
 
 const getAccount = async (address) => {
